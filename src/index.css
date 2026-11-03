@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #272757;
+  --color-secondary: #8686AC;
+  --color-accent: #505081;
+  --color-deep: #0F0E47;
+  --color-lavender: #F0F0F8;
+  --color-soft: #F7F7FB;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F7F7FB;
+  color: #272757;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button, a {
+  transition: all 0.3s ease;
+}
