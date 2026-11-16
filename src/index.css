@@ -17,6 +17,7 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 320px;
   background-color: #F7F7FB;
   color: #272757;
 }
@@ -27,4 +28,20 @@ html {
 
 button, a {
   transition: all 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
 }

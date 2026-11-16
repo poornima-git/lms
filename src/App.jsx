@@ -15,6 +15,10 @@ import Lesson from './student/pages/Lesson'
 import Quiz from './student/pages/Quiz'
 import Certificates from './student/pages/Certificates'
 import Profile from './student/pages/Profile'
+import MyCourses from './student/pages/MyCourses'
+import LearningProgress from './student/pages/LearningProgress'
+import QuizResults from './student/pages/QuizResults'
+
 
 // Instructor Pages
 import InstructorDashboard from './instructor/pages/InstructorDashboard'
@@ -43,7 +47,7 @@ function App() {
       {/* Public Pages */}
       <Route path="/" element={<Home />} />
       <Route path="/courses" element={<Courses />} />
-      <Route path="/courses/1" element={<CourseView />} />
+      <Route path="/courses/:courseId" element={<CourseView />} />
 
       {/* Authentication */}
       <Route path="/login" element={<Auth />} />
@@ -51,15 +55,19 @@ function App() {
 
       {/* Student Pages */}
       <Route path="/student" element={<StudentDashboard />} />
-      <Route path="/lesson/1" element={<Lesson />} />
-      <Route path="/quiz" element={<Quiz />} />
-      <Route path="/certificates" element={<Certificates />} />
-      <Route path="/profile" element={<Profile />} />
+      <Route path="/student/my-courses" element={<MyCourses />} />
+      <Route path="/student/progress" element={<LearningProgress />} />
+      <Route path="/student/lessons/:lessonId" element={<Lesson />} />
+      <Route path="/student/quizzes/:quizId" element={<Quiz />} />
+      <Route path="/student/quiz-results/:quizId" element={<QuizResults />} />
+      <Route path="/student/certificates" element={<Certificates />} />
+      <Route path="/student/profile" element={<Profile />} />
 
       {/* Instructor Pages */}
       <Route path="/instructor" element={<InstructorDashboard />} />
       <Route path="/instructor/courses" element={<InstructorCourses />} />
       <Route path="/instructor/create-course" element={<CreateCourse />} />
+      <Route path="/instructor/courses/:courseId/edit" element={<CreateCourse />}/>
       <Route path="/instructor/lessons" element={<ManageLessons />} />
       <Route path="/instructor/quizzes" element={<ManageQuizzes />} />
       <Route path="/instructor/students" element={<InstructorStudents />} />
